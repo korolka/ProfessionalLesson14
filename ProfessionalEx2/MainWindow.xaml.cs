@@ -40,10 +40,9 @@ namespace ProfessionalEx2
 
         private async void ConectToServerAsync()
         {
+            await Task.Delay(2000);
             Task task = new Task(ConectToServer);
-            Thread.Sleep(1000);
             task.Start();
-            await task;
         }
 
         private void ConectToServer()
